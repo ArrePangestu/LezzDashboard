@@ -18,7 +18,7 @@ export default function Header() {
                             <div>
                                 <a href="#" className="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900">
                                     <Image
-                                        src="/image/lezzdash.png"
+                                        src="/image/logo.JPG"
                                         alt="lezzdash"
                                         width={200}
                                         height={500}
