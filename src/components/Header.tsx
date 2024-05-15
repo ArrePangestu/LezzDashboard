@@ -17,12 +17,10 @@ export default function Header() {
 
                             <div>
                                 <a href="#" className="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900">
-                                    <img src="image/logo.jpg" alt="lezzlogo" className="h-8 w-auto" />
                                     <Image
                                         src="/image/logo.jpg"
                                         alt="lezzdash"
-                                        layout="responsive"
-                                        width={500}
+                                        width={200}
                                         height={500}
                                     />
                                 </a>
