@@ -294,7 +294,7 @@ function Dashboard() {
               <table className="mx-auto w-2/3 border-collapse mb-28">
                 <thead>
                   <tr>
-                    <th className="border-b px-24 py-2 text-white w-1/2 text-start">
+                    <th className="border-b px-24 py-2 text-white w-1/2 text-center">
                       Features
                     </th>
                     <th className="border-b px-4 py-2 text-white">
