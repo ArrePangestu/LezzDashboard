@@ -156,9 +156,9 @@ function Dashboard() {
                 </div>
 
                 {/* Landing */}
-                <div className=''>
+                <div>
                     <p className='text-4xl font-bold text-white text-center tracking-wider pb-2'>Only <span style={gradient}>$99</span> to enjoy <span style={gradient}>lifetime access</span></p>
-                    <p className='text-xs text-white text-center tracking-wide pb-20'>get all features such as project creation, form creation, components, etc</p>
+                    <p className='text-xs text-white text-center tracking-wide pb-20 px-4 sm:px-8'>get all features such as project creation, form creation, components, etc</p>
 
                     {/* Count Time */}
                     <p className='text-4xl font-bold text-white text-center tracking-wider pb-2'><span style={gradient}>Limited time</span> offer, sales ends in</p>
@@ -183,168 +183,174 @@ function Dashboard() {
                         </div>
                     </div>
 
-                    <p className='text-center text-white text-sm'>Don't miss the lifetime deal offer and start build complex React form in minutes!</p>
+                    <p className='text-center text-white text-sm px-4 sm:px-8'>Don't miss the lifetime deal offer and start build complex React form in minutes!</p>
                     <button className="rounded-md bg-indigo-500 w-60 h-10 text-white mx-auto block mt-5 mb-20">Get Lifetime Deal</button>
 
                     {/* Table */}
-                    <p className='text-4xl font-bold text-white text-center tracking-wide mb-5'>A <span style={gradient}>comparison</span> of top platforms</p>
-                    <div className='hidden lg:block overflow-x-auto'>
-                        <table className="mx-auto w-2/3 border-collapse mb-28">
-                            <thead>
-                                <tr>
-                                    <th className="border-b px-24 py-2 text-white w-1/2 text-start">Features</th>
-                                    <th className="border-b px-4 py-2 text-white">
-                                        <img src="image/logo.jpg" alt="logo" />
-                                    </th>
-                                    <th className="border-b px-4 py-2 text-white">
-                                        <img src="image/logo.jpg" alt="logo" />
-                                    </th>
-                                    <th className="border-b px-4 py-2 text-white">
-                                        <img src="image/logo.jpg" alt="logo" />
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td className="border-b px-24 py-2 text-white">Drag & Drop</td>
-                                    <td className="border px-4 py-2 text-white text-center">✅</td>
-                                    <td className="border px-4 py-2 text-white text-center">✅</td>
-                                    <td className="border-b px-4 py-2 text-white text-center">✅</td>
-                                </tr>
-                                <tr>
-                                    <td className="border-b px-24 py-2 text-white">Built-in Validation</td>
-                                    <td className="border px-4 py-2 text-white text-center">✅</td>
-                                    <td className="border px-4 py-2 text-white text-center">✅</td>
-                                    <td className="border-b px-4 py-2 text-white text-center">✅</td>
-                                </tr>
-                                <tr>
-                                    <td className="border-b px-24 py-2 text-white">Connect to External API</td>
-                                    <td className="border px-4 py-2 text-white text-center">✅</td>
-                                    <td className="border px-4 py-2 text-white text-center">❌</td>
-                                    <td className="border-b px-4 py-2 text-white text-center">✅</td>
-                                </tr>
-                                <tr>
-                                    <td className="border-b px-24 py-2 text-white">generate real native code</td>
-                                    <td className="border px-4 py-2 text-white text-center">✅</td>
-                                    <td className="border px-4 py-2 text-white text-center">❌</td>
-                                    <td className="border-b px-4 py-2 text-white text-center">❌</td>
-                                </tr>
-                                <tr>
-                                    <td className="border-b px-24 py-2 text-white">You Own the Code</td>
-                                    <td className="border px-4 py-2 text-white text-center">✅</td>
-                                    <td className="border px-4 py-2 text-white text-center">❌</td>
-                                    <td className="border-b px-4 py-2 text-white text-center">❌</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <div>
+                        <p className='text-4xl font-bold text-white text-center tracking-wide mb-5 px-4 sm:px-8'>A <span style={gradient}>comparison</span> of top platforms</p>
+                        <div className='hidden lg:block overflow-x-auto'>
+                            <table className="mx-auto w-2/3 border-collapse mb-28">
+                                <thead>
+                                    <tr>
+                                        <th className="border-b px-24 py-2 text-white w-1/2 text-start">Features</th>
+                                        <th className="border-b px-4 py-2 text-white">
+                                            <img src="image/logo.jpg" alt="logo" />
+                                        </th>
+                                        <th className="border-b px-4 py-2 text-white">
+                                            <img src="image/logo.jpg" alt="logo" />
+                                        </th>
+                                        <th className="border-b px-4 py-2 text-white">
+                                            <img src="image/logo.jpg" alt="logo" />
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td className="border-b px-24 py-2 text-white">Drag & Drop</td>
+                                        <td className="border px-4 py-2 text-white text-center">✅</td>
+                                        <td className="border px-4 py-2 text-white text-center">✅</td>
+                                        <td className="border-b px-4 py-2 text-white text-center">✅</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="border-b px-24 py-2 text-white">Built-in Validation</td>
+                                        <td className="border px-4 py-2 text-white text-center">✅</td>
+                                        <td className="border px-4 py-2 text-white text-center">✅</td>
+                                        <td className="border-b px-4 py-2 text-white text-center">✅</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="border-b px-24 py-2 text-white">Connect to External API</td>
+                                        <td className="border px-4 py-2 text-white text-center">✅</td>
+                                        <td className="border px-4 py-2 text-white text-center">❌</td>
+                                        <td className="border-b px-4 py-2 text-white text-center">✅</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="border-b px-24 py-2 text-white">generate real native code</td>
+                                        <td className="border px-4 py-2 text-white text-center">✅</td>
+                                        <td className="border px-4 py-2 text-white text-center">❌</td>
+                                        <td className="border-b px-4 py-2 text-white text-center">❌</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="border-b px-24 py-2 text-white">You Own the Code</td>
+                                        <td className="border px-4 py-2 text-white text-center">✅</td>
+                                        <td className="border px-4 py-2 text-white text-center">❌</td>
+                                        <td className="border-b px-4 py-2 text-white text-center">❌</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
 
-                    <div className="block lg:hidden overflow-x-auto">
-                        <table className="mx-auto w-full sm:w-2/3 border-collapse mb-28">
-                            <thead>
-                                <tr>
-                                    <th className="border-b px-4 py-2 text-white text-start">Features</th>
-                                    <th className="border-b px-4 py-2 text-white text-center">
-                                        <img src="image/logo.jpg" alt="logo" className="mx-auto" />
-                                    </th>
-                                    <th className="border-b px-4 py-2 text-white text-center">
-                                        <img src="image/logo.jpg" alt="logo" className="mx-auto" />
-                                    </th>
-                                    <th className="border-b px-4 py-2 text-white text-center">
-                                        <img src="image/logo.jpg" alt="logo" className="mx-auto" />
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td className="border-b px-4 py-2 text-white">Drag & Drop</td>
-                                    <td className="border px-4 py-2 text-white text-center">✅</td>
-                                    <td className="border px-4 py-2 text-white text-center">✅</td>
-                                    <td className="border-b px-4 py-2 text-white text-center">✅</td>
-                                </tr>
-                                <tr>
-                                    <td className="border-b px-4 py-2 text-white">Built-in Validation</td>
-                                    <td className="border px-4 py-2 text-white text-center">✅</td>
-                                    <td className="border px-4 py-2 text-white text-center">✅</td>
-                                    <td className="border-b px-4 py-2 text-white text-center">✅</td>
-                                </tr>
-                                <tr>
-                                    <td className="border-b px-4 py-2 text-white">Connect to External API</td>
-                                    <td className="border px-4 py-2 text-white text-center">✅</td>
-                                    <td className="border px-4 py-2 text-white text-center">❌</td>
-                                    <td className="border-b px-4 py-2 text-white text-center">✅</td>
-                                </tr>
-                                <tr>
-                                    <td className="border-b px-4 py-2 text-white">Generate Real Native Code</td>
-                                    <td className="border px-4 py-2 text-white text-center">✅</td>
-                                    <td className="border px-4 py-2 text-white text-center">❌</td>
-                                    <td className="border-b px-4 py-2 text-white text-center">❌</td>
-                                </tr>
-                                <tr>
-                                    <td className="border-b px-4 py-2 text-white">You Own the Code</td>
-                                    <td className="border px-4 py-2 text-white text-center">✅</td>
-                                    <td className="border px-4 py-2 text-white text-center">❌</td>
-                                    <td className="border-b px-4 py-2 text-white text-center">❌</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div className="block lg:hidden overflow-x-auto">
+                            <table className="mx-auto w-full sm:w-2/3 border-collapse mb-28">
+                                <thead>
+                                    <tr>
+                                        <th className="border-b px-4 py-2 text-white text-start">Features</th>
+                                        <th className="border-b px-4 py-2 text-white text-center">
+                                            <img src="image/logo.jpg" alt="logo" className="mx-auto" />
+                                        </th>
+                                        <th className="border-b px-4 py-2 text-white text-center">
+                                            <img src="image/logo.jpg" alt="logo" className="mx-auto" />
+                                        </th>
+                                        <th className="border-b px-4 py-2 text-white text-center">
+                                            <img src="image/logo.jpg" alt="logo" className="mx-auto" />
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td className="border-b px-4 py-2 text-white">Drag & Drop</td>
+                                        <td className="border px-4 py-2 text-white text-center">✅</td>
+                                        <td className="border px-4 py-2 text-white text-center">✅</td>
+                                        <td className="border-b px-4 py-2 text-white text-center">✅</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="border-b px-4 py-2 text-white">Built-in Validation</td>
+                                        <td className="border px-4 py-2 text-white text-center">✅</td>
+                                        <td className="border px-4 py-2 text-white text-center">✅</td>
+                                        <td className="border-b px-4 py-2 text-white text-center">✅</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="border-b px-4 py-2 text-white">Connect to External API</td>
+                                        <td className="border px-4 py-2 text-white text-center">✅</td>
+                                        <td className="border px-4 py-2 text-white text-center">❌</td>
+                                        <td className="border-b px-4 py-2 text-white text-center">✅</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="border-b px-4 py-2 text-white">Generate Real Native Code</td>
+                                        <td className="border px-4 py-2 text-white text-center">✅</td>
+                                        <td className="border px-4 py-2 text-white text-center">❌</td>
+                                        <td className="border-b px-4 py-2 text-white text-center">❌</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="border-b px-4 py-2 text-white">You Own the Code</td>
+                                        <td className="border px-4 py-2 text-white text-center">✅</td>
+                                        <td className="border px-4 py-2 text-white text-center">❌</td>
+                                        <td className="border-b px-4 py-2 text-white text-center">❌</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-
 
                     {/* Steps */}
-                    <p className='text-4xl font-bold text-white text-center'>How it <span style={gradient}>works?</span></p>
-                    <div className="bg-black text-white min-h-screen flex flex-col items-center mt-20">
-                        <div className="relative max-w-4xl mx-auto">
-                            <div className="flex items-start space-x-4">
-                                <div className="w-1/2">
-                                    <img src="image/lezzdash.png" alt="Step 1" className="rounded shadow-lg" />
+                    <div className="text-white min-h-screen flex flex-col items-center py-20 px-4 sm:px-8">
+                        <p className="text-4xl font-bold text-center">How it <span style={gradient}>works?</span></p>
+                        <div className="mt-20 space-y-20">
+                            {/* Step 1 */}
+                            <div className="relative max-w-4xl mx-auto px-4 sm:px-8">
+                                <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
+                                    <div className="md:w-1/2">
+                                        <img src="image/lezzdash.png" alt="Step 1" className="rounded shadow-lg w-full" />
+                                    </div>
+                                    <div className="md:w-1/2 pl-0 md:pl-8">
+                                        <h2 className="text-2xl font-semibold mb-4">Just <span style={gradient}>drag and drop</span></h2>
+                                        <p className="text-gray-300">
+                                            Simplify form creation with our Drag and Drop Form Component. Effortlessly design custom forms by dragging elements into place, streamlining your form-building process on our intuitive platform.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className="w-1/2 pl-8">
-                                    <h2 className="text-2xl font-semibold mb-4">Just <span style={gradient}>drag and drop</span></h2>
-                                    <p className="text-gray-300">
-                                        Simplify form creation with our Drag and Drop Form Component. Effortlessly design custom forms by dragging elements into place, streamlining your form-building process on our intuitive platform.
-                                    </p>
-                                </div>
+                                <div className="absolute left-1/2 top-0 bottom-0 transform -translate-x-1/2 border-r-4 border-purple-500 hidden md:block"></div>
+                                <div className="absolute left-1/2 transform -translate-x-1/2 -top-8 bg-purple-500 text-purple-700 w-12 h-12 rounded-full items-center justify-center text-2xl font-bold md:flex hidden">1</div>
                             </div>
-                            <div className="absolute left-1/2 top-0 bottom-0 transform -translate-x-1/2 border-r-4 border-purple-500"></div>
-                            <div className="absolute left-1/2 transform -translate-x-1/2 -top-8 bg-purple-500 text-purple-700 w-12 h-12 rounded-full flex items-center justify-center text-2xl font-bold">1</div>
-                        </div>
 
-                        <div className="relative max-w-4xl mx-auto mt-20">
-                            <div className="flex items-start space-x-4">
-                                <div className="w-1/2">
-                                    <h2 className="text-2xl font-semibold mb-4">Use the <span style={gradient}>generated natively</span> component</h2>
-                                    <p className="text-gray-300">
-                                        Implement with our natively generated code import effortlessly with a single line, and enjoy complete customization capabilities.
-                                    </p>
+                            {/* Step 2 */}
+                            <div className="relative max-w-4xl mx-auto px-4 sm:px-8 mt-20 md:mt-0">
+                                <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
+                                    <div className="md:w-1/2 order-2 md:order-1 pl-0 md:pl-8">
+                                        <h2 className="text-2xl font-semibold mb-4">Use the <span style={gradient}>generated natively</span> component</h2>
+                                        <p className="text-gray-300">
+                                            Implement with our natively generated code import effortlessly with a single line, and enjoy complete customization capabilities.
+                                        </p>
+                                    </div>
+                                    <div className="md:w-1/2 order-1 md:order-2">
+                                        <img src="image/lezzdash.png" alt="Step 2" className="rounded shadow-lg w-full" />
+                                    </div>
                                 </div>
-                                <div className="w-1/2 pl-8">
-                                    <img src="image/lezzdash.png" alt="Step 2" className="rounded shadow-lg" />
-                                </div>
+                                <div className="absolute left-1/2 top-0 bottom-0 transform -translate-x-1/2 border-r-4 border-purple-500 hidden md:block"></div>
+                                <div className="absolute left-1/2 transform -translate-x-1/2 -top-8 bg-purple-500 text-purple-700 w-12 h-12 rounded-full items-center justify-center text-2xl font-bold md:flex hidden">2</div>
                             </div>
-                            <div className="absolute left-1/2 top-0 bottom-0 transform -translate-x-1/2 border-r-4 border-purple-500"></div>
-                            <div className="absolute left-1/2 transform -translate-x-1/2 -top-8 bg-purple-500 text-purple-700 w-12 h-12 rounded-full flex items-center justify-center text-2xl font-bold">2</div>
-                        </div>
 
-                        <div className="relative max-w-4xl mx-auto mt-20">
-                            <div className="flex items-start space-x-4">
-                                <div className="w-1/2">
-                                    <img src="image/lezzdash.png" alt="Step 3" className="rounded shadow-lg" />
+                            {/* Step 3 */}
+                            <div className="relative max-w-4xl mx-auto px-4 sm:px-8 mt-20 md:mt-0">
+                                <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
+                                    <div className="md:w-1/2">
+                                        <img src="image/lezzdash.png" alt="Step 3" className="rounded shadow-lg w-full" />
+                                    </div>
+                                    <div className="md:w-1/2 pl-0 md:pl-8">
+                                        <h2 className="text-2xl font-semibold mb-4">Forms <span style={gradient}>ready in minutes</span></h2>
+                                        <p className="text-gray-300">
+                                            Get your forms up and running in minutes and enjoy real-time code generation for every platform update, ensuring seamless and immediate implementation.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className="w-1/2 pl-8">
-                                    <h2 className="text-2xl font-semibold mb-4">Forms <span style={gradient}>ready in minutes</span></h2>
-                                    <p className="text-gray-300">
-                                        Get your forms up and running in minutes and enjoy real-time code generation for every platform update, ensuring seamless and immediate implementation.
-                                    </p>
-                                </div>
+                                <div className="absolute left-1/2 top-0 bottom-0 transform -translate-x-1/2 border-r-4 border-purple-500 hidden md:block"></div>
+                                <div className="absolute left-1/2 transform -translate-x-1/2 -top-8 bg-purple-500 text-purple-700 w-12 h-12 rounded-full items-center justify-center text-2xl font-bold md:flex hidden">3</div>
                             </div>
-                            <div className="absolute left-1/2 top-0 bottom-0 transform -translate-x-1/2 border-r-4 border-purple-500"></div>
-                            <div className="absolute left-1/2 transform -translate-x-1/2 -top-8 bg-purple-500 text-purple-700 w-12 h-12 rounded-full flex items-center justify-center text-2xl font-bold">3</div>
                         </div>
                     </div>
 
                     {/* Discover */}
-                    <div className="bg-black text-white py-16">
+                    <div className="bg-black text-white py-16 px-4 sm:px-8">
                         <div className="text-center mb-12">
                             <h1 className="text-4xl font-bold text-white">Discover our <span style={gradient}>features</span></h1>
                             <p className="text-gray-400 mt-2">Not just embedded form!</p>
@@ -354,7 +360,7 @@ function Dashboard() {
                                 <h2 className="text-xl font-semibold mb-4">Drag & Drop Form</h2>
                                 <p className="text-gray-400">Effortlessly design custom forms by dragging elements into place,</p>
                             </div>
-                            <div className="bg-gray-800 p-6 rounded-lg shadow-md mb-20">
+                            <div className="bg-gray-800 p-6 rounded-lg shadow-md md:mb-20">
                                 <h2 className="text-xl font-semibold mb-4">Connect to external API</h2>
                                 <p className="text-gray-400">Easy to integrate with external APIs for every form configuration and action.</p>
                             </div>
@@ -366,7 +372,7 @@ function Dashboard() {
                                 <h2 className="text-xl font-semibold mb-4">Built-in Validation</h2>
                                 <p className="text-gray-400">Simplify data accuracy with built-in validation, offering diverse options for hassle-free submissions</p>
                             </div>
-                            <div className="bg-indigo-500 p-6 rounded-lg shadow-md border-4 border-indigo-500 -mt-20">
+                            <div className="bg-indigo-500 p-6 rounded-lg shadow-md border-4 border-indigo-500 md:-mt-20">
                                 <h2 className="text-xl font-semibold mb-4">Real time code generated</h2>
                                 <p className="text-white">Any changes made to the form on our platform will instantly regenerate the code in your project, ensuring seamless updates and consistency</p>
                             </div>
@@ -378,9 +384,9 @@ function Dashboard() {
                     </div>
 
                     {/* Benefit */}
-                    <div className="bg-black text-white py-16">
-                        <div className="text-center mb-12">
-                            <h1 className="text-4xl font-bold text-white">Benefit using <span style={gradient}>Lezzform</span></h1>
+                    <div className="bg-black text-white py-16 px-4 sm:px-8">
+                        <div className="text-center mb-12 px-4 sm:px-8">
+                            <h1 className="text-5xl font-bold text-white">Benefit using <span style={gradient}>Lezzform</span></h1>
                             <p className="text-gray-400 mt-2 text-sm">Tired of doing repetitive work like creating form in React?</p>
                         </div>
                         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 px-6">
@@ -408,8 +414,8 @@ function Dashboard() {
                     </div>
 
                     {/* Price */}
-                    <div className='mt-20'>
-                        <div className="text-center mb-12">
+                    <div className='mt-20 px-4 sm:px-8'>
+                        <div className="text-center mb-12 px-4 sm:px-8">
                             <h1 className="text-4xl font-bold text-white">Ready to <span style={gradient}>get started</span></h1>
                             <p className="text-white mt-2">For only $99, enjoy lifetime access to our powerful form builder!</p>
                         </div>
@@ -448,7 +454,7 @@ function Dashboard() {
                                 </div>
                             ))}
                         </div>
-                        <div className="mt-8 text-center">
+                        <div className="mt-8 text-center px-4 sm:px-8">
                             <p className="bg-gray-800 text-white p-4 rounded-lg max-w-4xl mx-auto">
                                 NOTE: This product is <span className="font-bold text-yellow-300">NON-REFUNDABLE</span> as it's a data offering. All sales are final.
                                 See SAMPLE of exactly what you'd get monthly & read all FAQs before purchasing.
@@ -491,8 +497,8 @@ function Dashboard() {
                         </div>
                     </div>
 
-                    <div className="bg-black text-white py-16">
-                        <div className="text-center mb-12">
+                    <div className="bg-black text-white py-16 px-4 sm:px-8">
+                        <div className="text-center mb-12 px-4 sm:px-8">
                             <h1 className="text-4xl font-bold text-white">Join the <span style={gradient}>Community</span></h1>
                             <p className="text-gray-400 mt-2">Supported by a network of early advocates, contributors, and champions</p>
                         </div>
