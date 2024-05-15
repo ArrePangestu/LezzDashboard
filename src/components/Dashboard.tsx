@@ -202,13 +202,13 @@ function Dashboard() {
                                     <tr>
                                         <th className="border-b px-24 py-2 text-white w-1/2 text-start">Features</th>
                                         <th className="border-b px-4 py-2 text-white">
-                                            <Image src="/image/logo.jpg" alt="logo" width={100} height={100} />
+                                            <Image src="/image/logo.JPG" alt="logo" width={100} height={100} />
                                         </th>
                                         <th className="border-b px-4 py-2 text-white">
-                                            <Image src="/image/logo.jpg" alt="logo" width={100} height={100}  />
+                                            <Image src="/image/logo.JPG" alt="logo" width={100} height={100}  />
                                         </th>
                                         <th className="border-b px-4 py-2 text-white">
-                                            <Image src="/image/logo.jpg" alt="logo" width={100} height={100} />
+                                            <Image src="/image/logo.JPG" alt="logo" width={100} height={100} />
                                         </th>
                                     </tr>
                                 </thead>
