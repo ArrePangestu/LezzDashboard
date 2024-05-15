@@ -253,13 +253,13 @@ function Dashboard() {
                                     <tr>
                                         <th className="border-b px-4 py-2 text-white text-start">Features</th>
                                         <th className="border-b px-4 py-2 text-white text-center">
-                                            <Image src="/image/logo.jpg" alt="logo" width={100} height={100} className="mx-auto" />
+                                            <Image src="/image/logo.JPG" alt="logo" width={100} height={100} className="mx-auto" />
                                         </th>
                                         <th className="border-b px-4 py-2 text-white text-center">
-                                            <Image src="/image/logo.jpg" alt="logo" width={100} height={100} className="mx-auto" />
+                                            <Image src="/image/logo.JPG" alt="logo" width={100} height={100} className="mx-auto" />
                                         </th>
                                         <th className="border-b px-4 py-2 text-white text-center">
-                                            <Image src="/image/logo.jpg" alt="logo" width={100} height={100} className="mx-auto" />
+                                            <Image src="/image/logo.JPG" alt="logo" width={100} height={100} className="mx-auto" />
                                         </th>
                                     </tr>
                                 </thead>
