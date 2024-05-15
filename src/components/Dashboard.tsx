@@ -402,7 +402,7 @@ function Dashboard() {
               <table className="mx-auto w-full sm:w-2/3 border-collapse mb-28">
                 <thead>
                   <tr>
-                    <th className="border-b px-4 py-2 text-white text-start">
+                    <th className="border-b px-4 py-2 text-white text-center">
                       Features
                     </th>
                     <th className="border-b px-4 py-2 text-white text-center">
