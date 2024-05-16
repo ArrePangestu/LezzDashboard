@@ -126,7 +126,7 @@ function Dashboard() {
 
   const faqs: FAQ[] = [
     {
-      question: "How can I pay for my appointment?",
+      question: "How can I pay for my appointment",
       answer:
         "You can pay for your appointment using various payment methods such as credit cards, debit cards, and online payment gateways. Please contact our office for more details.",
     },
@@ -137,7 +137,7 @@ function Dashboard() {
         "The cost of your appointment may be covered by private health insurance. We recommend checking with your insurance provider for specific coverage details.",
     },
     {
-      question: "Do I need a referral?",
+      question: "How to get Refferal code?",
       answer:
         "A referral may be required depending on the type of consultation you are seeking. Please contact us to find out if a referral is necessary for your appointment.",
     },
@@ -179,7 +179,7 @@ function Dashboard() {
 
   return (
     <Fragment>
-      <div className="container-xl bg-black">
+      <div className="container-xl" style={{ backgroundColor:'#1f2025' }}>
         {/* Hero */}
         <div className="pt-16 pb-36 text-center">
           <h1
@@ -270,25 +270,25 @@ function Dashboard() {
                 <span className="text-5xl font-bold md:text-7xl">
                   {addLeadingZero(timeLeft.days)} :
                 </span>
-                <span className="text-xl">Days</span>
+                <span className="text-xl md:me-8 me-5">Days</span>
               </div>
               <div className="flex flex-col items-center">
                 <span className="text-5xl font-bold md:text-7xl">
                   {addLeadingZero(timeLeft.hours)} :
                 </span>
-                <span className="text-xl">Hours</span>
+                <span className="text-xl md:me-9 me-7">Hours</span>
               </div>
               <div className="flex flex-col items-center">
                 <span className="text-5xl font-bold md:text-7xl">
                   {addLeadingZero(timeLeft.minutes)} :
                 </span>
-                <span className="text-xl">Minutes</span>
+                <span className="text-xl md:me-10 me-7">Minutes</span>
               </div>
               <div className="flex flex-col items-center">
-                <span className="text-5xl font-bold md:text-7xl">
+                <span className="text-5xl font-bold md:text-7xl me-4">
                   {addLeadingZero(timeLeft.seconds)}
                 </span>
-                <span className="text-xl">Seconds</span>
+                <span className="text-xl -ms-5">Seconds</span>
               </div>
             </div>
           </div>
@@ -439,25 +439,24 @@ function Dashboard() {
           </div>
 
           {/* Steps */}
-          <div className="text-white min-h-screen flex flex-col items-center py-20 px-4 sm:px-8 mt-5">
-            <p className="text-center text-3xl sm:text-5xl font-bold sm:font-extrabold">
+          <div className="text-white flex flex-col items-center py-20 px-4 sm:px-8 mt-5">
+            <p className="text-center text-3xl sm:text-5xl font-bold sm:font-extrabold -mb-4">
               How it <span style={gradient}>works?</span>
             </p>
             <div className="mt-20 space-y-20">
               {/* Step 1 */}
               <div className="relative max-w-4xl mx-auto px-4 sm:px-8">
                 <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
-                  <div className="md:w-1/2">
-                    {/* <Image src="image/lezzdash.png" alt="Step 1" className="rounded shadow-lg w-full" /> */}
+                  <div className="md:w-1/2 md:pe-10">
                     <Image
                       src="/image/carbon1.png"
                       alt="lezzdash"
-                      width={350}
-                      height={350}
+                      width={450}
+                      height={450}
                     />
                   </div>
                   <div className="md:w-1/2 pl-0 md:pl-8">
-                    <h2 className="text-2xl font-semibold mb-4 text-start">
+                    <h2 className="md:text-2xl text-xl font-semibold mb-4 text-start">
                       Just <span style={gradient}>drag and drop</span>
                     </h2>
                     <p className="text-gray-300 text-start">
@@ -468,17 +467,17 @@ function Dashboard() {
                     </p>
                   </div>
                 </div>
-                <div className="absolute left-1/2 top-0 bottom-0 transform -translate-x-1/2 border-r-4 border-purple-500 hidden md:block"></div>
+                <div className="absolute left-1/2 top-0 bottom-0 transform md:-mb-12 -translate-x-1/2 border-r-4 border-purple-500 hidden md:block"></div>
                 <div className="absolute left-1/2 transform -translate-x-1/2 -top-8 bg-purple-500 text-purple-700 w-12 h-12 rounded-full items-center justify-center text-2xl font-bold md:flex hidden">
                   1
                 </div>
               </div>
 
               {/* Step 2 */}
-              <div className="relative max-w-4xl mx-auto px-4 sm:px-8 mt-5 md:mt-5">
+              <div className="relative max-w-4xl mx-auto px-4 sm:px-8 md:mt-5">
                 <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
                   <div className="md:w-1/2 order-1 md:order-2 pl-0 md:pl-8">
-                    <h2 className="md:text-2xl font-semibold mb-4 flex md:whitespace-nowrap md:-ms-24">
+                    <h2 className="md:text-2xl text-xl whitespace-nowrap font-semibold mb-4 flex md:-ms-24 mt-5 md:-mt-2">
                       Use the{" "}
                       <span style={gradient}>
                         &nbsp;generated natively&nbsp;
@@ -491,36 +490,36 @@ function Dashboard() {
                       customization capabilities.
                     </p>
                   </div>
-                  <div className="md:w-1/2 order-1 md:order-2 ">
+                  <div className="md:w-1/2 md:order-2 ">
                     <Image
                       src="/image/carbon2.png"
                       alt="lezzdash"
-                      width={350}
-                      height={350}
-                      className="md:ms-10"
+                      width={450}
+                      height={450}
+                      className="md:ms-10 -mt-10 md:mt-1"
                     />
                   </div>
                 </div>
-                <div className="absolute left-1/2 top-0 bottom-0 transform -translate-x-1/2 border-r-4 border-purple-500 hidden md:block"></div>
+                <div className="absolute left-1/2 top-0 bottom-0 transform md:-mb-12 -translate-x-1/2 border-r-4 border-purple-500 hidden md:block"></div>
                 <div className="absolute left-1/2 transform -translate-x-1/2 -top-8 bg-purple-500 text-purple-700 w-12 h-12 rounded-full items-center justify-center text-2xl font-bold md:flex hidden">
                   2
                 </div>
               </div>
 
               {/* Step 3 */}
-              <div className="relative max-w-4xl mx-auto px-4 sm:px-8 mt-20 md:mt-0">
+              <div className="relative max-w-4xl mx-auto px-4 sm:px-8 mt-20 md:mt-0 ">
                 <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
-                  <div className="md:w-1/2">
+                  <div className="md:w-1/2 md:pe-10">
                     {/* <Image src="image/lezzdash.png" alt="Step 3" className="rounded shadow-lg w-full" /> */}
                     <Image
                       src="/image/carbon3.png"
                       alt="lezzdash"
-                      width={350}
-                      height={350}
+                      width={450}
+                      height={450}
                     />
                   </div>
                   <div className="md:w-1/2 pl-0 md:pl-8">
-                    <h2 className="text-2xl font-semibold mb-4 text-start">
+                    <h2 className="md:text-2xl text-xl font-semibold mb-4 text-start">
                       Forms <span style={gradient}>ready in minutes</span>
                     </h2>
                     <p className="text-gray-300 text-start">
@@ -539,7 +538,7 @@ function Dashboard() {
           </div>
 
           {/* Discover */}
-          <div className="bg-black text-white py-16 px-4 sm:px-8 -mt-10 md:-mt-20">
+          <div className=" text-white md:py-18 px-4 sm:px-8 md:mt-10">
             <div className="text-center mb-12">
               <h1 className="text-white text-3xl sm:text-5xl font-bold sm:font-extrabold">
                 Discover our <span style={gradient}>features</span>
@@ -586,18 +585,18 @@ function Dashboard() {
                   generated into native code
                 </p>
                 <div className="flex mt-8">
-                  <GiCardJackClubs className="size-20"/>
-                  <GiCardQueenClubs className="size-20"/>
-                  <GiCardKingClubs className="size-20"/>
-                  <GiCardAceHearts className="size-20"/>
+                  <GiCardJackClubs className="size-20" />
+                  <GiCardQueenClubs className="size-20" />
+                  <GiCardKingClubs className="size-20" />
+                  <GiCardAceHearts className="size-20" />
                 </div>
               </div>
               <div className="bg-gray-800 group md:-mt-14 p-6 rounded-lg md:h-85 hover:bg-blue-500 hover:shadow-blue-500 hover:shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]">
-              <div className="flex">
-                  <GiCardJackClubs className="size-20"/>
-                  <GiCardQueenClubs className="size-20"/>
-                  <GiCardKingClubs className="size-20"/>
-                  <GiCardAceHearts className="size-20"/>
+                <div className="flex">
+                  <GiCardJackClubs className="size-20" />
+                  <GiCardQueenClubs className="size-20" />
+                  <GiCardKingClubs className="size-20" />
+                  <GiCardAceHearts className="size-20" />
                 </div>
                 <h2 className="text-xl font-semibold mt-10">
                   Built-in Validation
@@ -617,10 +616,10 @@ function Dashboard() {
                   and consistency
                 </p>
                 <div className="flex mt-8">
-                  <GiCardJackClubs className="size-20"/>
-                  <GiCardQueenClubs className="size-20"/>
-                  <GiCardKingClubs className="size-20"/>
-                  <GiCardAceHearts className="size-20"/>
+                  <GiCardJackClubs className="size-20" />
+                  <GiCardQueenClubs className="size-20" />
+                  <GiCardKingClubs className="size-20" />
+                  <GiCardAceHearts className="size-20" />
                 </div>
               </div>
               <div className="bg-gray-800 group p-6 rounded-lg hover:bg-blue-500 hover:shadow-blue-500 hover:shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]">
@@ -630,17 +629,17 @@ function Dashboard() {
                   control and flexibility for your projects
                 </p>
                 <div className="flex mt-8">
-                  <GiCardJackClubs className="size-20"/>
-                  <GiCardQueenClubs className="size-20"/>
-                  <GiCardKingClubs className="size-20"/>
-                  <GiCardAceHearts className="size-20"/>
+                  <GiCardJackClubs className="size-20" />
+                  <GiCardQueenClubs className="size-20" />
+                  <GiCardKingClubs className="size-20" />
+                  <GiCardAceHearts className="size-20" />
                 </div>
               </div>
             </div>
           </div>
 
           {/* Benefit */}
-          <div className="bg-black text-white py-16 px-4 sm:px-8">
+          <div className=" text-white py-16 px-4 sm:px-8">
             <div className="text- mb-12 px-4 sm:px-8">
               <h1 className="text-white text-3xl sm:text-5xl font-bold sm:font-extrabold">
                 Benefit using <span style={gradient}>Lezzform</span>
@@ -764,7 +763,7 @@ function Dashboard() {
                     className="border-2 border-gray-100 rounded-lg dark:border-gray-700"
                   >
                     <button
-                      className="flex items-center justify-between w-full p-8"
+                      className="flex items-center justify-between w-full p-3"
                       onClick={() => toggleFAQ(index)}
                     >
                       <h1 className="font-semibold text-white dark:text-white">
@@ -815,7 +814,7 @@ function Dashboard() {
           </div>
 
           {/* Comunity */}
-          <div className="bg-black text-white py-16 px-4 sm:px-8">
+          <div className=" text-white py-16 px-4 sm:px-8">
             <div className="text-center mb-12 px-4 sm:px-8">
               <h1 className="text-4xl text-white sm:text-5xl font-bold sm:font-extrabold">
                 Join the <span style={gradient}>Community</span>
@@ -826,7 +825,7 @@ function Dashboard() {
               </p>
             </div>
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6">
-              <div className="bg-gray-800 group  h-80 p-6 rounded-lg hover:bg-blue-500 hover:shadow-blue-500 hover:shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]">
+              <div className="bg-gray-800 group  md:h-80 p-6 rounded-lg hover:bg-blue-500 hover:shadow-blue-500 hover:shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]">
                 <div className="flex items-center mb-4">
                   <Image
                     width={30}
@@ -952,7 +951,7 @@ function Dashboard() {
                 </p>
               </div>
 
-              <div className="bg-gray-800 group md:mt-10 h-80 p-6 rounded-lg hover:bg-blue-500 hover:shadow-blue-500 hover:shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]">
+              <div className="bg-gray-800 group md:mt-10 md:h-80 p-6 rounded-lg hover:bg-blue-500 hover:shadow-blue-500 hover:shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]">
                 <div className="flex items-center mb-4">
                   <Image
                     width={30}
@@ -972,7 +971,7 @@ function Dashboard() {
             </div>
           </div>
 
-          <div className="bg-black py-16 md:-mt-10">
+          <div className="py-16 md:-mt-10">
             <p className="text-white text-center">
               Dont miss the lifetime deal offer and start build complex React
               form in minutes!

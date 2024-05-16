@@ -9,15 +9,18 @@ export default function Header() {
   };
   return (
     <Fragment>
-      <nav className="bg-black sticky place-items-center border-solid top-0 z-50 px-6 sm:px-16 py-4 sm:py-3">
+      <nav
+        className="sticky place-items-center border-solid top-0 z-50 px-6 sm:px-16 py-4 sm:py-3"
+        style={{ backgroundColor: "#1f2025" }}
+      >
         <div>
           <div className="flex justify-between">
             <div className="flex space-x-4">
               <div>
                 <Image
-                  src="/image/logo.JPG"
+                  src="/image/logo.png"
                   alt="lezzdash"
-                  width={100}
+                  width={900}
                   height={100}
                   className="h-auto sm:h-auto size-28 sm:size-40"
                 />
@@ -54,12 +57,11 @@ export default function Header() {
 
         {/* Mobile menu */}
         <div
-          className={`${isMenuOpen ? "block" : "hidden"} mobile-menu md:hidden text-center`}
+          className={`${
+            isMenuOpen ? "block" : "hidden"
+          } mobile-menu md:hidden text-center`}
         >
-          <a
-            href="#"
-            className="block py-2 px-4 text-white text-sm"
-          >
+          <a href="#" className="block py-2 px-4 text-white text-sm">
             Sign Up
           </a>
         </div>

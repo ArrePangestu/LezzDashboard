@@ -4,7 +4,7 @@ import { Disclosure } from '@headlessui/react'
 export default function Footer() {
     const currentYear = new Date().getFullYear();
     return (
-        <Disclosure as="nav" className="bg-black">
+        <Disclosure as="nav" style={{ backgroundColor:'#181a21' }}>
             <Fragment>
                 <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                     <div className="relative flex h-16 items-center justify-between">
