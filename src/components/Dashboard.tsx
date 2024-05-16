@@ -372,7 +372,7 @@ function Dashboard() {
               </table>
             </div>
 
-            <div className="block lg:hidden overflow-x-auto">
+            <div className="block lg:hidden overflow-x-auto p-4">
               <table className="mx-auto w-full sm:w-2/3 bg-slate-400 border-collapse bg-opacity-50">
                 <thead>
                   <tr>
