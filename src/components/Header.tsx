@@ -15,7 +15,7 @@ export default function Header() {
             <div className="flex space-x-4">
               <div>
                 <Image
-                  src="/image/lezzform-logo.svg"
+                  src="/image/logo.JPG"
                   alt="lezzdash"
                   width={100}
                   height={100}
@@ -25,12 +25,6 @@ export default function Header() {
             </div>
             <div className="flex sm:gap-2">
               <div className="hidden md:flex items-center space-x-1">
-                <a
-                  href="#"
-                  className="py-2 px-3 bg-indigo-500 hover:bg-indigo-300 text-purple-200 hover:text-purple-800 rounded-full transition duration-300"
-                >
-                  Book a Demo
-                </a>
                 <a href="#" className="py-2 px-3 text-white">
                   Sign In
                 </a>
@@ -62,18 +56,6 @@ export default function Header() {
         <div
           className={`${isMenuOpen ? "block" : "hidden"} mobile-menu md:hidden text-center`}
         >
-          <a
-            href="#"
-            className="block py-2 px-4 text-white text-sm"
-          >
-            Menu 1
-          </a>
-          <a
-            href="#"
-            className="block py-2 px-4 text-white text-sm"
-          >
-            Menu 2
-          </a>
           <a
             href="#"
             className="block py-2 px-4 text-white text-sm"

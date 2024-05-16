@@ -4,6 +4,10 @@ import { BiTimer } from "react-icons/bi";
 import Image from "next/image";
 import { FaCirclePlay } from "react-icons/fa6";
 import { IoIosCloseCircle } from "react-icons/io";
+import { GiCardJackClubs } from "react-icons/gi";
+import { GiCardQueenClubs } from "react-icons/gi";
+import { GiCardKingClubs } from "react-icons/gi";
+import { GiCardAceHearts } from "react-icons/gi";
 
 interface TimeLeft {
   days: number;
@@ -165,6 +169,14 @@ function Dashboard() {
     };
   }, [play]);
 
+  const rows = [
+    ["drag & drop form", "✅", "✅", "✅"],
+    ["built in validation", "✅", "✅", "✅"],
+    ["connect to external API", "✅", "❌", "✅"],
+    ["generate real native code", "✅", "❌", "❌"],
+    ["you own the code", "✅", "❌", "❌"],
+  ];
+
   return (
     <Fragment>
       <div className="container-xl bg-black">
@@ -200,16 +212,20 @@ function Dashboard() {
           <Image
             src="/image/lezzform-video-placeholder.png"
             alt="LezzAuth Showcase/Demo"
-            className="sm:relative absolute sm:hidden"
+            className="sm:relative absolute sm:hidden p-10"
             width={900}
             height={900}
           />
           <div className="absolute" onClick={handlePlay}>
-            <FaCirclePlay className="px-6 aspect-square size-20 text-sm bg-lezzindigo rounded-full hover:bg-lezzchia hover:scale-110 hover:ring-8 hover:ring-lezzborder transition-all ease-out duration-300 delay-150" />
+            <button className="px-6 aspect-square size-20 text-sm bg-lezzindigo rounded-full hover:bg-lezzchia hover:scale-110 hover:ring-8 hover:ring-lezzborder transition-all ease-out duration-300 delay-150">
+              {/* <Image src="/image/ic-play.svg" alt="Playback" width={40} height={40} /> */}
+              <FaCirclePlay className="w-20 h-20 -ms-6" />
+            </button>
+            {/* <FaCirclePlay className="px-6 aspect-square size-20 text-sm bg-lezzindigo rounded-full hover:bg-lezzchia hover:scale-110 hover:ring-8 hover:ring-lezzborder transition-all ease-out duration-300 delay-150" /> */}
           </div>
           {play && (
             <div
-              className="fixed z-[100] top-0 left-0 w-screen h-screen flex place-items-center place-content-center bg-lezzbg bg-opacity-95"
+              className="fixed z-[100] top-0 left-0 w-screen h-screen flex place-items-center place-content-center bg-slate-400 bg-opacity-50"
               onClick={handleClose}
             >
               <div className="relative w-fit h-5/6">
@@ -244,7 +260,7 @@ function Dashboard() {
           </p>
 
           {/* Count Time */}
-          <p className="text-white text-center tracking-wider pb-5 text-3xl sm:text-5xl font-bold sm:font-extrabold">
+          <p className="text-white text-center md:tracking-wider pb-5 text-3xl sm:text-5xl font-bold sm:font-extrabold">
             <span style={gradient}>Limited time</span> offer, sales ends in
           </p>
 
@@ -277,7 +293,7 @@ function Dashboard() {
             </div>
           </div>
 
-          <p className="text-center text-white text-xl px-4 sm:px-8">
+          <p className="text-center text-white text-md px-4 sm:px-8">
             Don&apos;t miss the lifetime deal offer and start build complex
             React form in minutes!
           </p>
@@ -287,231 +303,143 @@ function Dashboard() {
 
           {/* Table */}
           <div>
-            <p className="text-white text-center tracking-wide px-4 sm:px-8 text-3xl sm:text-5xl font-bold sm:font-extrabold">
+            <p className="text-white text-center tracking-wide px-4 sm:px-8 text-3xl sm:text-5xl font-bold sm:font-extrabold mb-10">
               A <span style={gradient}>comparison</span> of top platforms
             </p>
+
             <div className="hidden lg:block overflow-x-auto">
-              <table className="mx-auto w-2/3 border-collapse mb-28">
+              <table className="mx-auto w-full sm:w-2/3 bg-slate-400 border-collapse bg-opacity-50">
                 <thead>
                   <tr>
-                    <th className="border-b px-24 py-2 text-white w-1/2 text-center">
+                    <th className="py-2 px-4 text-white border-t border-b ">
                       Features
                     </th>
-                    <th className="border-b px-4 py-2 text-white">
+                    <th className="border-t border">
                       <Image
-                        src="/image/logo.JPG"
+                        src="/image/lezzform-logo.svg"
                         alt="logo"
-                        width={100}
-                        height={100}
+                        width={80}
+                        height={80}
+                        className="mx-auto"
                       />
                     </th>
-                    <th className="border-b px-4 py-2 text-white">
+                    <th className="border-t border">
                       <Image
-                        src="/image/logo.JPG"
+                        src="/image/gform.png"
                         alt="logo"
-                        width={100}
-                        height={100}
+                        width={20}
+                        height={20}
+                        className="mx-auto"
                       />
                     </th>
-                    <th className="border-b px-4 py-2 text-white">
+                    <th className="border-t border-b">
                       <Image
-                        src="/image/logo.JPG"
+                        src="/image/mform.png"
                         alt="logo"
-                        width={100}
-                        height={100}
+                        width={80}
+                        height={80}
+                        className="mx-auto"
                       />
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td className="border-b px-24 py-2 text-white">
-                      Drag & Drop
-                    </td>
-                    <td className="border px-4 py-2 text-white text-center">
-                      ✅
-                    </td>
-                    <td className="border px-4 py-2 text-white text-center">
-                      ✅
-                    </td>
-                    <td className="border-b px-4 py-2 text-white text-center">
-                      ✅
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border-b px-24 py-2 text-white">
-                      Built-in Validation
-                    </td>
-                    <td className="border px-4 py-2 text-white text-center">
-                      ✅
-                    </td>
-                    <td className="border px-4 py-2 text-white text-center">
-                      ✅
-                    </td>
-                    <td className="border-b px-4 py-2 text-white text-center">
-                      ✅
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border-b px-24 py-2 text-white">
-                      Connect to External API
-                    </td>
-                    <td className="border px-4 py-2 text-white text-center">
-                      ✅
-                    </td>
-                    <td className="border px-4 py-2 text-white text-center">
-                      ❌
-                    </td>
-                    <td className="border-b px-4 py-2 text-white text-center">
-                      ✅
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border-b px-24 py-2 text-white">
-                      generate real native code
-                    </td>
-                    <td className="border px-4 py-2 text-white text-center">
-                      ✅
-                    </td>
-                    <td className="border px-4 py-2 text-white text-center">
-                      ❌
-                    </td>
-                    <td className="border-b px-4 py-2 text-white text-center">
-                      ❌
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border-b px-24 py-2 text-white">
-                      You Own the Code
-                    </td>
-                    <td className="border px-4 py-2 text-white text-center">
-                      ✅
-                    </td>
-                    <td className="border px-4 py-2 text-white text-center">
-                      ❌
-                    </td>
-                    <td className="border-b px-4 py-2 text-white text-center">
-                      ❌
-                    </td>
-                  </tr>
+                  {rows.map((row, rowIndex) => (
+                    <tr
+                      key={rowIndex}
+                      className={
+                        rowIndex % 2 === 0
+                          ? "bg-black bg-opacity-75"
+                          : "bg-slate-300 bg-opacity-25"
+                      }
+                    >
+                      {row.map((cell, cellIndex) => (
+                        <td
+                          key={cellIndex}
+                          // className="py-2 px-4 text-white border-t border-b"
+                          className={`py-2 px-4  text-white ${
+                            cellIndex !== 0 ? "border-l" : "text-start"
+                          } ${
+                            cellIndex !== row.length - 1 ? "border-r " : ""
+                          } border-b`}
+                        >
+                          {cell}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
 
             <div className="block lg:hidden overflow-x-auto">
-              <table className="mx-auto w-full sm:w-2/3 border-collapse mb-28">
+              <table className="mx-auto w-full sm:w-2/3 bg-slate-400 border-collapse bg-opacity-50">
                 <thead>
                   <tr>
-                    <th className="border-b px-4 py-2 text-white text-center">
+                    <th className="py-2 px-4 text-white border-t border-b ">
                       Features
                     </th>
-                    <th className="border-b px-4 py-2 text-white text-center">
+                    <th className="border-t border">
                       <Image
-                        src="/image/logo.JPG"
+                        src="/image/lezzform-logo.svg"
                         alt="logo"
-                        width={100}
-                        height={100}
+                        width={80}
+                        height={80}
                         className="mx-auto"
                       />
                     </th>
-                    <th className="border-b px-4 py-2 text-white text-center">
+                    <th className="border-t border">
                       <Image
-                        src="/image/logo.JPG"
+                        src="/image/gform.png"
                         alt="logo"
-                        width={100}
-                        height={100}
+                        width={20}
+                        height={20}
                         className="mx-auto"
                       />
                     </th>
-                    <th className="border-b px-4 py-2 text-white text-center">
+                    <th className="border-t border-b">
                       <Image
-                        src="/image/logo.JPG"
+                        src="/image/mform.png"
                         alt="logo"
-                        width={100}
-                        height={100}
+                        width={80}
+                        height={80}
                         className="mx-auto"
                       />
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td className="border-b px-4 py-2 text-white">
-                      Drag & Drop
-                    </td>
-                    <td className="border px-4 py-2 text-white text-center">
-                      ✅
-                    </td>
-                    <td className="border px-4 py-2 text-white text-center">
-                      ✅
-                    </td>
-                    <td className="border-b px-4 py-2 text-white text-center">
-                      ✅
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border-b px-4 py-2 text-white">
-                      Built-in Validation
-                    </td>
-                    <td className="border px-4 py-2 text-white text-center">
-                      ✅
-                    </td>
-                    <td className="border px-4 py-2 text-white text-center">
-                      ✅
-                    </td>
-                    <td className="border-b px-4 py-2 text-white text-center">
-                      ✅
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border-b px-4 py-2 text-white">
-                      Connect to External API
-                    </td>
-                    <td className="border px-4 py-2 text-white text-center">
-                      ✅
-                    </td>
-                    <td className="border px-4 py-2 text-white text-center">
-                      ❌
-                    </td>
-                    <td className="border-b px-4 py-2 text-white text-center">
-                      ✅
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border-b px-4 py-2 text-white">
-                      Generate Real Native Code
-                    </td>
-                    <td className="border px-4 py-2 text-white text-center">
-                      ✅
-                    </td>
-                    <td className="border px-4 py-2 text-white text-center">
-                      ❌
-                    </td>
-                    <td className="border-b px-4 py-2 text-white text-center">
-                      ❌
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border-b px-4 py-2 text-white">
-                      You Own the Code
-                    </td>
-                    <td className="border px-4 py-2 text-white text-center">
-                      ✅
-                    </td>
-                    <td className="border px-4 py-2 text-white text-center">
-                      ❌
-                    </td>
-                    <td className="border-b px-4 py-2 text-white text-center">
-                      ❌
-                    </td>
-                  </tr>
+                  {rows.map((row, rowIndex) => (
+                    <tr
+                      key={rowIndex}
+                      className={
+                        rowIndex % 2 === 0
+                          ? "bg-black bg-opacity-75"
+                          : "bg-slate-300 bg-opacity-25"
+                      }
+                    >
+                      {row.map((cell, cellIndex) => (
+                        <td
+                          key={cellIndex}
+                          // className="py-2 px-4 text-white border-t border-b"
+                          className={`py-2 px-4  text-white ${
+                            cellIndex !== 0 ? "border-l" : "text-start"
+                          } ${
+                            cellIndex !== row.length - 1 ? "border-r " : ""
+                          } border-b`}
+                        >
+                          {cell}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
           </div>
 
           {/* Steps */}
-          <div className="text-white min-h-screen flex flex-col items-center py-20 px-4 sm:px-8">
+          <div className="text-white min-h-screen flex flex-col items-center py-20 px-4 sm:px-8 mt-5">
             <p className="text-center text-3xl sm:text-5xl font-bold sm:font-extrabold">
               How it <span style={gradient}>works?</span>
             </p>
@@ -522,17 +450,17 @@ function Dashboard() {
                   <div className="md:w-1/2">
                     {/* <Image src="image/lezzdash.png" alt="Step 1" className="rounded shadow-lg w-full" /> */}
                     <Image
-                      src="/image/lezzdash.png"
+                      src="/image/carbon1.png"
                       alt="lezzdash"
-                      width={500}
-                      height={500}
+                      width={350}
+                      height={350}
                     />
                   </div>
                   <div className="md:w-1/2 pl-0 md:pl-8">
-                    <h2 className="text-2xl font-semibold mb-4">
+                    <h2 className="text-2xl font-semibold mb-4 text-start">
                       Just <span style={gradient}>drag and drop</span>
                     </h2>
-                    <p className="text-gray-300">
+                    <p className="text-gray-300 text-start">
                       Simplify form creation with our Drag and Drop Form
                       Component. Effortlessly design custom forms by dragging
                       elements into place, streamlining your form-building
@@ -547,26 +475,29 @@ function Dashboard() {
               </div>
 
               {/* Step 2 */}
-              <div className="relative max-w-4xl mx-auto px-4 sm:px-8 mt-20 md:mt-0">
+              <div className="relative max-w-4xl mx-auto px-4 sm:px-8 mt-5 md:mt-5">
                 <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
-                  <div className="md:w-1/2 order-2 md:order-1 pl-0 md:pl-8">
-                    <h2 className="text-2xl font-semibold mb-4">
-                      Use the <span style={gradient}>generated natively</span>{" "}
+                  <div className="md:w-1/2 order-1 md:order-2 pl-0 md:pl-8">
+                    <h2 className="md:text-2xl font-semibold mb-4 flex md:whitespace-nowrap md:-ms-24">
+                      Use the{" "}
+                      <span style={gradient}>
+                        &nbsp;generated natively&nbsp;
+                      </span>
                       component
                     </h2>
-                    <p className="text-gray-300">
+                    <p className="text-gray-300 md:text-end me-14 text-start">
                       Implement with our natively generated code import
                       effortlessly with a single line, and enjoy complete
                       customization capabilities.
                     </p>
                   </div>
-                  <div className="md:w-1/2 order-1 md:order-2">
-                    {/* <Image src="image/lezzdash.png" alt="Step 2" className="rounded shadow-lg w-full" /> */}
+                  <div className="md:w-1/2 order-1 md:order-2 ">
                     <Image
-                      src="/image/lezzdash.png"
+                      src="/image/carbon2.png"
                       alt="lezzdash"
-                      width={500}
-                      height={500}
+                      width={350}
+                      height={350}
+                      className="md:ms-10"
                     />
                   </div>
                 </div>
@@ -582,17 +513,17 @@ function Dashboard() {
                   <div className="md:w-1/2">
                     {/* <Image src="image/lezzdash.png" alt="Step 3" className="rounded shadow-lg w-full" /> */}
                     <Image
-                      src="/image/lezzdash.png"
+                      src="/image/carbon3.png"
                       alt="lezzdash"
-                      width={500}
-                      height={500}
+                      width={350}
+                      height={350}
                     />
                   </div>
                   <div className="md:w-1/2 pl-0 md:pl-8">
-                    <h2 className="text-2xl font-semibold mb-4">
+                    <h2 className="text-2xl font-semibold mb-4 text-start">
                       Forms <span style={gradient}>ready in minutes</span>
                     </h2>
-                    <p className="text-gray-300">
+                    <p className="text-gray-300 text-start">
                       Get your forms up and running in minutes and enjoy
                       real-time code generation for every platform update,
                       ensuring seamless and immediate implementation.
@@ -608,7 +539,7 @@ function Dashboard() {
           </div>
 
           {/* Discover */}
-          <div className="bg-black text-white py-16 px-4 sm:px-8">
+          <div className="bg-black text-white py-16 px-4 sm:px-8 -mt-10 md:-mt-20">
             <div className="text-center mb-12">
               <h1 className="text-white text-3xl sm:text-5xl font-bold sm:font-extrabold">
                 Discover our <span style={gradient}>features</span>
@@ -618,63 +549,99 @@ function Dashboard() {
               </p>
             </div>
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6">
-              <div className="bg-gray-800 p-6 rounded-lg shadow-md h-60">
+              <div className="bg-gray-800 group p-6 rounded-lg h-60 hover:bg-blue-500 hover:shadow-blue-500 hover:shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]">
                 <h2 className="text-xl font-semibold mb-4">Drag & Drop Form</h2>
-                <p className="text-gray-400">
+                <p className="text-gray-400 group-hover:text-white">
                   Effortlessly design custom forms by dragging elements into
                   place,
                 </p>
+                <div className="flex mt-8">
+                  <GiCardJackClubs className="size-20" />
+                  <GiCardQueenClubs className="size-20" />
+                  <GiCardKingClubs className="size-20" />
+                  <GiCardAceHearts className="size-20" />
+                </div>
               </div>
-              <div className="bg-gray-800 p-6 rounded-lg shadow-md md:mb-20">
+              <div className="bg-gray-800 group hover:text-white p-6 rounded-lg md:mb-20 hover:bg-blue-500 hover:shadow-blue-500 hover:shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]">
+                <div className="flex">
+                  <GiCardJackClubs className="size-20" />
+                  <GiCardQueenClubs className="size-20" />
+                  <GiCardKingClubs className="size-20" />
+                  <GiCardAceHearts className="size-20" />
+                </div>
                 <h2 className="text-xl font-semibold mb-4">
                   Connect to external API
                 </h2>
-                <p className="text-gray-400">
+                <p className="text-gray-400 group-hover:text-white">
                   Easy to integrate with external APIs for every form
                   configuration and action.
                 </p>
               </div>
-              <div className="bg-gray-800 p-6 rounded-lg shadow-md">
+              <div className="bg-gray-800 group p-6 rounded-lg hover:bg-blue-500 hover:shadow-blue-500 hover:shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]">
                 <h2 className="text-xl font-semibold mb-4">
                   Generate real native code
                 </h2>
-                <p className="text-gray-400">
+                <p className="text-gray-400 group-hover:text-white">
                   Design your form on our platform, and it will be automatically
                   generated into native code
                 </p>
+                <div className="flex mt-8">
+                  <GiCardJackClubs className="size-20"/>
+                  <GiCardQueenClubs className="size-20"/>
+                  <GiCardKingClubs className="size-20"/>
+                  <GiCardAceHearts className="size-20"/>
+                </div>
               </div>
-              <div className="bg-gray-800 p-6 rounded-lg shadow-md h-60">
-                <h2 className="text-xl font-semibold mb-4">
+              <div className="bg-gray-800 group md:-mt-14 p-6 rounded-lg md:h-85 hover:bg-blue-500 hover:shadow-blue-500 hover:shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]">
+              <div className="flex">
+                  <GiCardJackClubs className="size-20"/>
+                  <GiCardQueenClubs className="size-20"/>
+                  <GiCardKingClubs className="size-20"/>
+                  <GiCardAceHearts className="size-20"/>
+                </div>
+                <h2 className="text-xl font-semibold mt-10">
                   Built-in Validation
                 </h2>
-                <p className="text-gray-400">
+                <p className="text-gray-400 group-hover:text-white">
                   Simplify data accuracy with built-in validation, offering
                   diverse options for hassle-free submissions
                 </p>
               </div>
-              <div className="bg-indigo-500 p-6 rounded-lg shadow-md border-4 border-indigo-500 md:-mt-20">
+              <div className="bg-gray-800 group p-6 rounded-lg hover:bg-blue-500 hover:shadow-blue-500 hover:shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)] md:-mt-20">
                 <h2 className="text-xl font-semibold mb-4">
                   Real time code generated
                 </h2>
-                <p className="text-white">
+                <p className="text-gray-400 group-hover:text-white">
                   Any changes made to the form on our platform will instantly
                   regenerate the code in your project, ensuring seamless updates
                   and consistency
                 </p>
+                <div className="flex mt-8">
+                  <GiCardJackClubs className="size-20"/>
+                  <GiCardQueenClubs className="size-20"/>
+                  <GiCardKingClubs className="size-20"/>
+                  <GiCardAceHearts className="size-20"/>
+                </div>
               </div>
-              <div className="bg-gray-800 p-6 rounded-lg shadow-md">
+              <div className="bg-gray-800 group p-6 rounded-lg hover:bg-blue-500 hover:shadow-blue-500 hover:shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]">
                 <h2 className="text-xl font-semibold mb-4">You own the code</h2>
-                <p className="text-gray-400">
+                <p className="text-gray-400 group-hover:text-white">
                   You retain full ownership of the code, empowering you with
                   control and flexibility for your projects
                 </p>
+                <div className="flex mt-8">
+                  <GiCardJackClubs className="size-20"/>
+                  <GiCardQueenClubs className="size-20"/>
+                  <GiCardKingClubs className="size-20"/>
+                  <GiCardAceHearts className="size-20"/>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Benefit */}
           <div className="bg-black text-white py-16 px-4 sm:px-8">
-            <div className="text-center mb-12 px-4 sm:px-8">
+            <div className="text- mb-12 px-4 sm:px-8">
               <h1 className="text-white text-3xl sm:text-5xl font-bold sm:font-extrabold">
                 Benefit using <span style={gradient}>Lezzform</span>
               </h1>
@@ -682,7 +649,7 @@ function Dashboard() {
                 Tired of doing repetitive work like creating form in React?
               </p>
             </div>
-            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 px-6">
+            <div className="max-w-7xl text-start mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 px-6">
               <div className="bg-gray-800 p-10 rounded-lg shadow-md">
                 <BiTimer className="size-10" />
                 <h2 className="text-xl font-semibold mb-4">
@@ -721,7 +688,7 @@ function Dashboard() {
           </div>
 
           {/* Price */}
-          <div className="mt-20 px-4 sm:px-8">
+          <div className="mt-20 px-4 sm:px-8 md:-mt-1">
             <div className="text-center mb-12 px-4 sm:px-8">
               <h1 className="text-white text-3xl sm:text-5xl font-bold sm:font-extrabold">
                 Ready to <span style={gradient}>get started</span>
@@ -736,7 +703,7 @@ function Dashboard() {
               {pricingOptions.map((option, index) => (
                 <div
                   key={index}
-                  className={`${option.bgColor} ${option.textColor} p-6 rounded-lg shadow-md text-center`}
+                  className={`${option.bgColor} ${option.textColor} p-6 rounded-lg shadow-md text-start`}
                 >
                   <h3 className={`text-xl font-bold ${option.textColor}`}>
                     {option.title}
@@ -755,26 +722,12 @@ function Dashboard() {
                   <ul className="text-left mt-4 mb-6">
                     {option.features.map((feature, index) => (
                       <li key={index} className="flex items-center mb-2">
-                        <svg
-                          className="w-5 h-5 text-green-500 mr-2"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                        {feature}
+                        ✅{feature}
                       </li>
                     ))}
                   </ul>
                   <button
-                    className={`${option.buttonColor} ${option.textButtonColor} py-2 px-4 rounded-lg hover:${option.buttonColor}`}
+                    className={`${option.buttonColor} ${option.textButtonColor} py-2 px-4 rounded-lg w-full hover:${option.buttonColor}`}
                   >
                     {option.buttonText}
                   </button>
@@ -804,7 +757,7 @@ function Dashboard() {
               <p className="text-white mt-2 text-center text-xl">
                 Your Guide to Understanding Lezzform
               </p>
-              <div className="mt-12 space-y-8">
+              <div className="mt-12 space-y-8 p-5">
                 {faqs.map((faq, index) => (
                   <div
                     key={index}
@@ -873,137 +826,144 @@ function Dashboard() {
               </p>
             </div>
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6">
-              <div className="bg-gray-800 p-6 rounded-lg shadow-md h-60">
+              <div className="bg-gray-800 group  h-80 p-6 rounded-lg hover:bg-blue-500 hover:shadow-blue-500 hover:shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]">
                 <div className="flex items-center mb-4">
                   <Image
-                    width={50}
-                    height={50}
+                    width={30}
+                    height={30}
                     className="rounded-full mr-4"
                     src="data:image/png;base64,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"
                     alt="profile"
                   />
-                  <h2 className="text-xl text-white">@thoughguy_</h2>
+                  <h2 className="text-md text-white">@thoughguy_</h2>
                 </div>
-                <p className="text-gray-400">
+                <p className="text-gray-400 group-hover:text-white">
                   Working with lezzform has been one of the best dev experiences
                   I&apos;ve had lately. The best dev experiences. Im the best
                   Captain in the Sea
                 </p>
               </div>
-              <div className="bg-gray-800 p-6 rounded-lg shadow-md h-60">
+
+              <div className="bg-gray-800 group md:mb-10 p-6 rounded-lg hover:bg-blue-500 hover:shadow-blue-500 hover:shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]">
                 <div className="flex items-center mb-4">
                   <Image
-                    width={50}
-                    height={50}
+                    width={30}
+                    height={30}
                     className="rounded-full mr-4"
                     src="data:image/png;base64,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"
                     alt="profile"
                   />
-                  <h2 className="text-xl text-white">@thoughguy_</h2>
+                  <h2 className="text-md text-white">@thoughguy_</h2>
                 </div>
-                <p className="text-gray-400">
+                <p className="text-gray-400 group-hover:text-white">
                   Working with lezzform has been one of the best dev experiences
                   I&apos;ve had lately. The best dev experiences. Im the best
                   Captain in the Sea
                 </p>
               </div>
-              <div className="bg-gray-800 p-6 rounded-lg shadow-md h-60">
+
+              <div className="bg-gray-800 group p-6 rounded-lg hover:bg-blue-500 hover:shadow-blue-500 hover:shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]">
                 <div className="flex items-center mb-4">
                   <Image
-                    width={50}
-                    height={50}
+                    width={30}
+                    height={30}
                     className="rounded-full mr-4"
                     src="data:image/png;base64,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"
                     alt="profile"
                   />
-                  <h2 className="text-xl text-white">@thoughguy_</h2>
+                  <h2 className="text-md text-white">@thoughguy_</h2>
                 </div>
-                <p className="text-gray-400">
+                <p className="text-gray-400 group-hover:text-white">
                   Working with lezzform has been one of the best dev experiences
                   I&apos;ve had lately. The best dev experiences. Im the best
                   Captain in the Sea
                 </p>
               </div>
-              <div className="bg-gray-800 p-6 rounded-lg shadow-md h-60">
+
+              <div className="bg-gray-800 group md:-mb-10 p-6 rounded-lg hover:bg-blue-500 hover:shadow-blue-500 hover:shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]">
                 <div className="flex items-center mb-4">
                   <Image
-                    width={50}
-                    height={50}
+                    width={30}
+                    height={30}
                     className="rounded-full mr-4"
                     src="data:image/png;base64,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"
                     alt="profile"
                   />
-                  <h2 className="text-xl text-white">@thoughguy_</h2>
+                  <h2 className="text-md text-white">@thoughguy_</h2>
                 </div>
-                <p className="text-gray-400">
+                <p className="text-gray-400 group-hover:text-white">
                   Working with lezzform has been one of the best dev experiences
                   I&apos;ve had lately. The best dev experiences. Im the best
                   Captain in the Sea
                 </p>
               </div>
-              <div className="bg-gray-800 p-6 rounded-lg shadow-md h-60">
+
+              <div className="bg-gray-800 group p-6 rounded-lg hover:bg-blue-500 hover:shadow-blue-500 hover:shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]">
                 <div className="flex items-center mb-4">
                   <Image
-                    width={50}
-                    height={50}
+                    width={30}
+                    height={30}
                     className="rounded-full mr-4"
                     src="data:image/png;base64,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"
                     alt="profile"
                   />
-                  <h2 className="text-xl text-white">@thoughguy_</h2>
+                  <h2 className="text-md text-white">@thoughguy_</h2>
                 </div>
-                <p className="text-gray-400">
+                <p className="text-gray-400 group-hover:text-white">
                   Working with lezzform has been one of the best dev experiences
                   I&apos;ve had lately. The best dev experiences. Im the best
                   Captain in the Sea
                 </p>
               </div>
-              <div className="bg-gray-800 p-6 rounded-lg shadow-md h-60">
+
+              <div className="bg-gray-800 group md:-mt-10 p-6 rounded-lg hover:bg-blue-500 hover:shadow-blue-500 hover:shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]">
                 <div className="flex items-center mb-4">
                   <Image
-                    width={50}
-                    height={50}
+                    width={30}
+                    height={30}
                     className="rounded-full mr-4"
                     src="data:image/png;base64,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"
                     alt="profile"
                   />
-                  <h2 className="text-xl text-white">@thoughguy_</h2>
+                  <h2 className="text-md text-white">@thoughguy_</h2>
                 </div>
-                <p className="text-gray-400">
+                <p className="text-gray-400 group-hover:text-white">
                   Working with lezzform has been one of the best dev experiences
                   I&apos;ve had lately. The best dev experiences. Im the best
                   Captain in the Sea
                 </p>
               </div>
-              <div className="bg-gray-800 p-6 rounded-lg shadow-md h-60">
+
+              <div className="bg-gray-800 group p-6 rounded-lg hover:bg-blue-500 hover:shadow-blue-500 hover:shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]">
                 <div className="flex items-center mb-4">
                   <Image
-                    width={50}
-                    height={50}
+                    width={30}
+                    height={30}
                     className="rounded-full mr-4"
                     src="data:image/png;base64,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"
                     alt="profile"
                   />
-                  <h2 className="text-xl text-white">@thoughguy_</h2>
+                  <h2 className="text-md text-white">@thoughguy_</h2>
                 </div>
-                <p className="text-gray-400">
+                <p className="text-gray-400 group-hover:text-white">
                   Working with lezzform has been one of the best dev experiences
                   I&apos;ve had lately. The best dev experiences. Im the best
                   Captain in the Sea
                 </p>
               </div>
-              <div className="bg-gray-800 p-6 rounded-lg shadow-md h-60">
+
+              <div className="bg-gray-800 group md:mt-10 h-80 p-6 rounded-lg hover:bg-blue-500 hover:shadow-blue-500 hover:shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]">
                 <div className="flex items-center mb-4">
                   <Image
-                    width={50}
-                    height={50}
+                    width={30}
+                    height={30}
                     className="rounded-full mr-4"
                     src="data:image/png;base64,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"
                     alt="profile"
                   />
-                  <h2 className="text-xl text-white">@thoughguy_</h2>
+                  <h2 className="text-md text-white">@thoughguy_</h2>
                 </div>
-                <p className="text-gray-400">
+                <p className="text-gray-400 group-hover:text-white">
                   Working with lezzform has been one of the best dev experiences
                   I&apos;ve had lately. The best dev experiences. Im the best
                   Captain in the Sea
@@ -1012,7 +972,7 @@ function Dashboard() {
             </div>
           </div>
 
-          <div className="bg-black py-16">
+          <div className="bg-black py-16 md:-mt-10">
             <p className="text-white text-center">
               Dont miss the lifetime deal offer and start build complex React
               form in minutes!
