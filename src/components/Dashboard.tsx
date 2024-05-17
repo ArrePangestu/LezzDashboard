@@ -186,7 +186,7 @@ function Dashboard() {
             className="text-5xl md:text-7xl font-bold sm:font-extrabold py-2 mb-5"
             style={gradient}
           >
-            Not just from builder.
+            Not just form builder.
           </h1>
           <h1 className="text-white text-3xl sm:text-5xl font-bold sm:font-extrabold">
             Build natively for React & React Native.
