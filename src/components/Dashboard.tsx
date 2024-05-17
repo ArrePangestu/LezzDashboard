@@ -204,17 +204,18 @@ function Dashboard() {
           <Image
             src="/image/lezzform-video-placeholder.png"
             alt="LezzAuth Showcase/Demo"
-            className="sm:relative absolute hidden sm:block"
+            className="sm:relative absolute hidden sm:block p-2"
             width={1300}
             height={1300}
           />
-
+          
           <Image
             src="/image/lezzform-video-placeholder.png"
             alt="LezzAuth Showcase/Demo"
-            className="sm:relative absolute sm:hidden p-10"
-            width={900}
-            height={900}
+            className="sm:relative absolute sm:hidden p-2"
+            style={{ height: "350px", marginTop: "-30px" }}
+            width={1300}
+            height={1300}
           />
           <div className="absolute" onClick={handlePlay}>
             <button className="px-6 aspect-square size-20 text-sm bg-lezzindigo rounded-full hover:bg-lezzchia hover:scale-110 hover:ring-8 hover:ring-lezzborder transition-all ease-out duration-300 delay-150">
@@ -798,7 +799,7 @@ function Dashboard() {
                       className="flex items-center justify-between w-full p-3"
                       onClick={() => toggleFAQ(index)}
                     >
-                      <h1 className="font-semibold text-white dark:text-white">
+                      <h1 className="font-semibold text-white dark:text-white text-start">
                         {faq.question}
                       </h1>
                       <span
@@ -834,7 +835,7 @@ function Dashboard() {
                     {openIndexes.includes(index) && (
                       <>
                         <hr className="border-gray-200 dark:border-gray-700" />
-                        <p className="p-8 text-sm text-gray-500 dark:text-gray-300">
+                        <p className="p-8 text-sm text-gray-500 dark:text-gray-300 text-start">
                           {faq.answer}
                         </p>
                       </>

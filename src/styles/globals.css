@@ -36,5 +36,6 @@ body {
   h2.step2 {
     white-space: normal;
     margin-left: 1px;
+    text-align: start;
   }
 }
