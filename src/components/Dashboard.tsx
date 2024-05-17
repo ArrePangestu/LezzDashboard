@@ -179,7 +179,7 @@ function Dashboard() {
 
   return (
     <Fragment>
-      <div className="container-xl" style={{ backgroundColor:'#1f2025' }}>
+      <div className="container-xl" style={{ backgroundColor: "#1f2025" }}>
         {/* Hero */}
         <div className="pt-16 pb-36 text-center">
           <h1
@@ -264,31 +264,60 @@ function Dashboard() {
             <span style={gradient}>Limited time</span> offer, sales ends in
           </p>
 
-          <div className="text-white pb-2">
+          <div className="hidden text-white pb-2 md:block">
             <div className="flex sm:flex-row justify-center space-x-4 space-y-0">
               <div className="flex flex-col items-center">
-                <span className="text-5xl font-bold md:text-7xl">
+                <span className="text-5xl font-bold md:text-7xl ">
                   {addLeadingZero(timeLeft.days)} :
                 </span>
-                <span className="text-xl md:me-8 me-5">Days</span>
+                <span className="text-xl md:me-6">Days</span>
               </div>
               <div className="flex flex-col items-center">
                 <span className="text-5xl font-bold md:text-7xl">
                   {addLeadingZero(timeLeft.hours)} :
                 </span>
-                <span className="text-xl md:me-9 me-7">Hours</span>
+                <span className="text-xl md:me-10">Hours</span>
               </div>
               <div className="flex flex-col items-center">
                 <span className="text-5xl font-bold md:text-7xl">
                   {addLeadingZero(timeLeft.minutes)} :
                 </span>
-                <span className="text-xl md:me-10 me-7">Minutes</span>
+                <span className="text-xl md:me-10">Minutes</span>
               </div>
               <div className="flex flex-col items-center">
                 <span className="text-5xl font-bold md:text-7xl me-4">
                   {addLeadingZero(timeLeft.seconds)}
                 </span>
                 <span className="text-xl -ms-5">Seconds</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-white pb-2 md:hidden block">
+            <div className="flex sm:flex-row justify-center space-x-4 space-y-0">
+              <div className="flex flex-col items-center ">
+                <span className="text-4xl font-bold relative">
+                  {addLeadingZero(timeLeft.days)} <span className="text-md absolute ms-1">:</span>
+                </span>
+                <span className="text-md">Days</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <span className="text-4xl font-bold relative">
+                  {addLeadingZero(timeLeft.hours)} <span className="text-md absolute ms-1">:</span>
+                </span>
+                <span className="text-md">Hours</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <span className="text-4xl font-bold">
+                  {addLeadingZero(timeLeft.minutes)} <span className="text-md absolute ms-1">:</span>
+                </span>
+                <span className="text-md">Minutes</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <span className="text-4xl font-bold md:text-7xl me-4">
+                  {addLeadingZero(timeLeft.seconds)}
+                </span>
+                <span className="text-md -ms-5">Seconds</span>
               </div>
             </div>
           </div>
