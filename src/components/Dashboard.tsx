@@ -297,19 +297,22 @@ function Dashboard() {
             <div className="flex sm:flex-row justify-center space-x-4 space-y-0">
               <div className="flex flex-col items-center ">
                 <span className="text-4xl font-bold relative">
-                  {addLeadingZero(timeLeft.days)} <span className="text-md absolute ms-1">:</span>
+                  {addLeadingZero(timeLeft.days)}{" "}
+                  <span className="text-md absolute ms-1">:</span>
                 </span>
                 <span className="text-md">Days</span>
               </div>
               <div className="flex flex-col items-center">
                 <span className="text-4xl font-bold relative">
-                  {addLeadingZero(timeLeft.hours)} <span className="text-md absolute ms-1">:</span>
+                  {addLeadingZero(timeLeft.hours)}{" "}
+                  <span className="text-md absolute ms-1">:</span>
                 </span>
                 <span className="text-md">Hours</span>
               </div>
               <div className="flex flex-col items-center">
                 <span className="text-4xl font-bold">
-                  {addLeadingZero(timeLeft.minutes)} <span className="text-md absolute ms-1">:</span>
+                  {addLeadingZero(timeLeft.minutes)}{" "}
+                  <span className="text-md absolute ms-1">:</span>
                 </span>
                 <span className="text-md">Minutes</span>
               </div>
@@ -506,8 +509,8 @@ function Dashboard() {
               <div className="relative max-w-4xl mx-auto px-4 sm:px-8 md:mt-5">
                 <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
                   <div className="md:w-1/2 order-1 md:order-2 pl-0 md:pl-8">
-                    <h2 className="md:text-2xl text-xl whitespace-nowrap font-semibold mb-4 flex md:-ms-24 mt-5 md:-mt-2">
-                      Use the{" "}
+                    <h2 className="md:text-2xl text-xl whitespace-nowrap font-semibold mb-4 mt-5 md:-mt-2 md:-ms-24 step2">
+                      Use the
                       <span style={gradient}>
                         &nbsp;generated natively&nbsp;
                       </span>

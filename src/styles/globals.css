@@ -31,3 +31,10 @@ body {
     text-wrap: balance;
   }
 }
+
+@media only screen and (max-width: 860px) {
+  h2.step2 {
+    white-space: normal;
+    margin-left: 1px;
+  }
+}
